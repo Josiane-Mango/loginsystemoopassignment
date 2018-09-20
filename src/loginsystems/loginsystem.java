@@ -5,6 +5,17 @@
  */
 package loginsystems;
 
+import java.awt.Color;
+import static java.awt.SystemColor.info;
+import java.awt.event.WindowEvent;
+import java.sql.*;
+import javax.swing.JOptionPane;
+import loginsystems.login2;
+
+
+
+
+
 
 
 /**
@@ -12,10 +23,9 @@ package loginsystems;
  * @author Josiane Mango
  */
 public class loginsystem extends javax.swing.JFrame {
-
-    /**
-     * Creates new form loginsystem
-     */
+public static String username="root";
+public static String password="root";
+  public static String connstring="root";    
     public loginsystem() {
         initComponents();
     }
@@ -34,7 +44,7 @@ public class loginsystem extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         JTxtusername = new javax.swing.JTextField();
         JPassword = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        jlogin = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         JBuutonexit = new javax.swing.JButton();
 
@@ -56,6 +66,7 @@ public class loginsystem extends javax.swing.JFrame {
             }
         });
 
+        JPassword.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         JPassword.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, null, new java.awt.Color(204, 204, 204)));
         JPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,10 +74,10 @@ public class loginsystem extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("LOGIN");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jlogin.setText("LOGIN");
+        jlogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jloginActionPerformed(evt);
             }
         });
 
@@ -100,7 +111,7 @@ public class loginsystem extends javax.swing.JFrame {
                 .addGap(249, 249, 249))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(192, 192, 192)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(59, 59, 59)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
@@ -120,7 +131,7 @@ public class loginsystem extends javax.swing.JFrame {
                     .addComponent(JPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(jlogin)
                     .addComponent(jButton2)
                     .addComponent(JBuutonexit))
                 .addGap(54, 54, 54))
@@ -163,9 +174,27 @@ public class loginsystem extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JPasswordActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jloginActionPerformed
+        String pass=JPassword.getText();
+        String user=JTxtusername.getText();
+        if (pass.contains("two")&&(user.contains("JOJO")))
+        {
+            JTxtusername.setText(null);
+            JPassword.setText(null);
+            systemExit();
+            
+            login2 Info=new login2 ();
+            Info.setVisible(true);
+            
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Invalid Login Details","Login Error",JOptionPane.ERROR_MESSAGE);
+            JPassword.setText(null);
+            JTxtusername.setText(null);
+        }
+       
+    }//GEN-LAST:event_jloginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,15 +235,18 @@ public class loginsystem extends javax.swing.JFrame {
     private javax.swing.JButton JBuutonexit;
     private javax.swing.JPasswordField JPassword;
     private javax.swing.JTextField JTxtusername;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jlogin;
     // End of variables declaration//GEN-END:variables
 
-private void exit
-
+private void systemExit()
+{
+    WindowEvent winclose= new WindowEvent (this, WindowEvent.WINDOW_CLOSING);
+}
+        
 
 
 

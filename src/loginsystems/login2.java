@@ -5,6 +5,8 @@
  */
 package loginsystems;
 
+import javax.swing.ButtonGroup;
+
 /**
  *
  * @author Josiane Mango
@@ -16,6 +18,12 @@ public class login2 extends javax.swing.JFrame {
      */
     public login2() {
         initComponents();
+          this.setLocationRelativeTo(null);
+          ButtonGroup bg=new ButtonGroup();
+          bg.add(JRadiomale);
+          bg.add(JRadiofemale);
+          JRadiomale.setSelected(true);
+          
     }
 
     /**
@@ -27,19 +35,169 @@ public class login2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        dateChooserDialog1 = new datechooser.beans.DateChooserDialog();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
+        buttonGroup5 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        JLabellastname = new javax.swing.JLabel();
+        JTxtlastname = new javax.swing.JTextField();
+        JTxtfirstname = new javax.swing.JTextField();
+        JLabelfirstname = new javax.swing.JLabel();
+        JLabelgender = new javax.swing.JLabel();
+        JLabeldob = new javax.swing.JLabel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        JLabelphone = new javax.swing.JLabel();
+        JTxtphonername = new javax.swing.JTextField();
+        JRadiomale = new javax.swing.JRadioButton();
+        JRadiofemale = new javax.swing.JRadioButton();
+        JButtonclear = new javax.swing.JButton();
+        JButtonadd = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setText("       ADD USER");
+        jLabel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        JLabellastname.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        JLabellastname.setText("Last Name");
+        JLabellastname.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 255, 255), null, null));
+
+        JTxtlastname.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        JTxtlastname.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, null, new java.awt.Color(0, 204, 204)));
+        JTxtlastname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTxtlastnameActionPerformed(evt);
+            }
+        });
+
+        JTxtfirstname.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        JTxtfirstname.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, null, new java.awt.Color(0, 204, 204)));
+        JTxtfirstname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTxtfirstnameActionPerformed(evt);
+            }
+        });
+
+        JLabelfirstname.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        JLabelfirstname.setText("First Name");
+        JLabelfirstname.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 255, 255), null, null));
+
+        JLabelgender.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        JLabelgender.setText("Gender");
+        JLabelgender.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 255, 255), null, null));
+
+        JLabeldob.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        JLabeldob.setText("Date of Birth");
+        JLabeldob.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 255, 255), null, null));
+
+        JLabelphone.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        JLabelphone.setText("Telephone");
+        JLabelphone.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 255, 255), null, null));
+
+        JTxtphonername.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        JTxtphonername.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, null, new java.awt.Color(0, 204, 204)));
+        JTxtphonername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTxtphonernameActionPerformed(evt);
+            }
+        });
+
+        JRadiomale.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        JRadiomale.setText("Male");
+        JRadiomale.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JRadiomaleActionPerformed(evt);
+            }
+        });
+
+        JRadiofemale.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        JRadiofemale.setText("Female");
+
+        JButtonclear.setText("CLEAR");
+        JButtonclear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JButtonclearActionPerformed(evt);
+            }
+        });
+
+        JButtonadd.setText("ADD");
+        JButtonadd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JButtonaddActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 874, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 112, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(JLabellastname, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                    .addComponent(JLabelfirstname, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                    .addComponent(JLabelgender, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                    .addComponent(JLabeldob, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                    .addComponent(JLabelphone, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE))
+                .addGap(84, 84, 84)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(JTxtfirstname)
+                    .addComponent(JTxtlastname, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jDateChooser1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(JTxtphonername, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(JRadiomale, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                        .addComponent(JRadiofemale, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(232, 232, 232))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(242, 242, 242)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(206, 206, 206)
+                        .addComponent(JButtonclear, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(66, 66, 66)
+                        .addComponent(JButtonadd, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 377, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(84, 84, 84)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JTxtfirstname, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JLabelfirstname, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JLabellastname, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTxtlastname, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JLabeldob, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JLabelphone, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTxtphonername, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JRadiomale)
+                    .addComponent(JLabelgender, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JRadiofemale))
+                .addGap(76, 76, 76)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JButtonclear)
+                    .addComponent(JButtonadd))
+                .addContainerGap(148, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -55,12 +213,45 @@ public class login2 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JTxtlastnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTxtlastnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTxtlastnameActionPerformed
+
+    private void JTxtfirstnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTxtfirstnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTxtfirstnameActionPerformed
+
+    private void JTxtphonernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTxtphonernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTxtphonernameActionPerformed
+
+    private void JButtonclearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonclearActionPerformed
+
+        JTxtfirstname.setText(null);
+        JTxtlastname.setText(null);
+        jDateChooser1.setDate(null);
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_JButtonclearActionPerformed
+
+    private void JButtonaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonaddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JButtonaddActionPerformed
+
+    private void JRadiomaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JRadiomaleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JRadiomaleActionPerformed
 
     /**
      * @param args the command line arguments
@@ -98,6 +289,26 @@ public class login2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JButtonadd;
+    private javax.swing.JButton JButtonclear;
+    private javax.swing.JLabel JLabeldob;
+    private javax.swing.JLabel JLabelfirstname;
+    private javax.swing.JLabel JLabelgender;
+    private javax.swing.JLabel JLabellastname;
+    private javax.swing.JLabel JLabelphone;
+    private javax.swing.JRadioButton JRadiofemale;
+    private javax.swing.JRadioButton JRadiomale;
+    private javax.swing.JTextField JTxtfirstname;
+    private javax.swing.JTextField JTxtlastname;
+    private javax.swing.JTextField JTxtphonername;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
+    private javax.swing.ButtonGroup buttonGroup5;
+    private datechooser.beans.DateChooserDialog dateChooserDialog1;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
